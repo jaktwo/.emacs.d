@@ -33,7 +33,8 @@
       (string-color "#3B82B0")
       (cursor-color "#6363D6")
       (selection-color "#9AF2BD")
-      (comment-color "#6363D6"))
+      (comment-color "#6363D6")
+      (paren-match-color "#D56D8A"))
 
   (custom-theme-set-faces
    's-plus-clover-light
@@ -65,8 +66,14 @@
 
    `(highlight ((t (:background ,bg))))
 
-   `(mode-line ((t (:background ,fg :foreground ,bg :box nil))))
-   `(mode-line-inactive ((t (:background ,fg :foreground ,bg :box nil))))
+   `(mode-line ((t (:background ,fg :foreground ,bg :box nil :weight normal))))
+   `(mode-line-inactive ((t (:background ,fg :foreground ,bg :box nil :weight normal))))
+
+   `(mode-line-buffer-id ((t (:weight normal :foreground ,bg :background ,fg))))
+
+   `(help-key-binding ((t (:background ,bg :foreground ,fg :box (:line-width 1 :color ,bg)))))
+
+   `(show-paren-match ((t (:background ,paren-match-color :foreground ,bg))))
 
    `(fringe ((t (:background ,bg))))
 

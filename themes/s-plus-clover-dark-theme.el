@@ -34,7 +34,8 @@
       (string-color "#AED2EF")
       (cursor-color "#90EE90")
       (selection-color "#0000FF")
-      (comment-color "#37CB4E"))
+      (comment-color "#37CB4E")
+      (paren-match-color "#B63535"))
 
   (custom-theme-set-faces
    's-plus-clover-dark
@@ -66,8 +67,14 @@
 
    `(highlight ((t (:background ,bg))))
 
-   `(mode-line ((t (:background ,fg :foreground ,bg :box nil))))
-   `(mode-line-inactive ((t (:background ,fg :foreground ,bg :box nil))))
+   `(mode-line ((t (:background ,fg :foreground ,bg :box nil :weight normal))))
+   `(mode-line-inactive ((t (:background ,fg :foreground ,bg :box nil :weight normal))))
+
+   `(mode-line-buffer-id ((t (:weight normal :foreground ,bg :background ,fg))))
+
+   `(help-key-binding ((t (:background ,bg :foreground ,fg :box (:line-width 1 :color ,bg)))))
+
+   `(show-paren-match ((t (:background ,paren-match-color :foreground ,bg))))
 
    `(fringe ((t (:background ,bg))))
 
