@@ -61,3 +61,5 @@
 (auto-save-mode -1)
 
 (setq ring-bell-function 'ignore)
+
+(setq column-number-mode t)
